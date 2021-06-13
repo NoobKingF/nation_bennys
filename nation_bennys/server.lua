@@ -106,7 +106,7 @@ AddEventHandler('saveVehicle', function(plate,props)
 	MySQL.Async.fetchAll('SELECT vehicle FROM owned_vehicles WHERE plate = @plate', {
 		['@plate'] = props.plate
 	}, function(result)
-		if result[1].vehicle then
+		if result[1] ~= nil and result[1].vehicle then
             local vehicle = json.decode(result[1].vehicle)
 			if props.model == vehicle.model then
 				MySQL.Async.execute('UPDATE owned_vehicles SET vehicle = @vehicle WHERE plate = @plate', {
