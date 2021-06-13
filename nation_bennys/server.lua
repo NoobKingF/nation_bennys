@@ -19,7 +19,7 @@ ESX.RegisterServerCallback('nation:checkPayment',function(source, cb, amount)
     local source = source
 	local xPlayer = ESX.GetPlayerFromId(source)
     local bankey = xPlayer.getAccount('bank').money
-    local cash = xPlayer.getAccount('money').money
+    local cash = xPlayer.getMoney()
     if not config.mechaniconly and bankey >= amount then
         if config.societymoney then
             local societyAccount = nil
@@ -92,6 +92,10 @@ ESX.RegisterServerCallback('nation:checkVehicle',function(source, cb, vehicle)
     end
 end)
 
+AddEventHandler('playerDropped', function (reason)
+    print('Player ' .. GetPlayerName(source) .. ' dropped (Reason: ' .. reason .. ')')
+end)
+  
 RegisterServerEvent('saveVehicle')
 AddEventHandler('saveVehicle', function(plate,props)
     local source = source
