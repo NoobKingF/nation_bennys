@@ -1,0 +1,7 @@
+added society money option at config
+need esx datastore and other shit search it.
+
+this also need progressbar
+
+if you need modification just message me, ill do when i have a free fucking time.
+- Noobking
