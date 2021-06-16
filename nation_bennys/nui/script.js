@@ -1,32 +1,157 @@
 
-    function googleTranslateElementInit() { 
-    new google.translate.TranslateElement({ pageLanguage: 'pt' }, 'google_translate_element'); 
-    setTimeout(function(){ var select = document.querySelector('select.goog-te-combo'); 
-    select.value    = 'en'; 
-    select.dispatchEvent(new Event('change')); 
-    $('.titulo').empty(); 
-    $('.titulo').html('<img src="https://i.imgur.com/iIjUwKk.png">'); 
-    document.getElementById("principal").style.backgroundImage = "url('https://i.imgur.com/af4NeLq.png')"; 
-    document.getElementById("principal").style.backgroundSize = "110%";
-    document.getElementById("principal").style.opacity = '1.0';
-    document.getElementById("principal").style.backgroundRepeat = 'no-repeat'; },1000) }
-		var loadJS = function(url, implementationCode, location){
-		var scriptTag = document.createElement('script');
-		scriptTag.src = url;
-		scriptTag.onload = implementationCode;
-		scriptTag.onreadystatechange = implementationCode;
-		location.appendChild(scriptTag);
+    function translation() {
+		console.log('translation')
+		document.getElementById("cam").innerHTML = 'Press <span style="color: rgb(241, 66, 66);">h/q</span> to enable/disable fixed camera';
+		document.getElementById("pagar").innerHTML = 'Cost &nbsp;&nbsp;&nbsp;<i class="fas fa-hand-holding-usd"></i>';
+		document.getElementById("sair").innerHTML = 'Close &nbsp;&nbsp;&nbsp;<i class="fas fa-window-close"></i>';
+		//document.getElementById("aerofólio > textbox").innerHTML = 'Close&nbsp;&nbsp;&nbsp;<i class="fas fa-window-close"></i>';
+		$('#aerofólio > .textbox > span').html('Spoiler');
+		$('#parachoque-dianteiro > .textbox > span').html('Front Bumper');
+		$('#parachoque-traseiro > .textbox > span').html('Rear Bumper');
+		$('#saias > .textbox > span').html('Side Skirt');
+		$('#escapamento > .textbox > span').html('Muffler');
+		$('#chassi > .textbox > span').html('Chasis');
+		$('#grelha > .textbox > span').html('Grille');
+		$('#capô > .textbox > span').html('Hood');
+		$('#para-lama > .textbox > span').html('Fender');
+		$('#teto > .textbox > span').html('Roof');
+		$('#motor > .textbox > span').html('Engine');
+		$('#freios > .textbox > span').html('Brakes');
+		$('#transmissão > .textbox > span').html('Trannsmition');
+		$('#buzina > .textbox > span').html('Horn');
+		$('#suspensão > .textbox > span').html('Suspension');
+		$('#blindagem > .textbox > span').html('Armor');
+		$('#turbo > .textbox > span').html('Turbo');
+		$('#interior > .textbox > span').html('Interior');
+		$('#farol > .textbox > span').html('Headlights');
+		$('#decal > .textbox > span').html('Decals');
+		$('#rodas > .textbox > span').html('Wheels');
+		$('#placa > .textbox > span').html('Plate');
+		$('#neon > .textbox > span').html('Neon Lights');
+		$('#pintura > .textbox > span').html('Paint');
+		$('#vidro > .textbox > span').html('Mirrors');
+		
+		//inner
+		$('#titulo').html('Select Upgrade');
+		$('#aerofólio-0 > span').html('Default');
+		$('#parachoque-dianteiro-0 > span').html('Default');
+		$('#parachoque-traseiro-0 > span').html('Default');
+		$('#saias-0 > span').html('Default');
+		$('#escapamento-0 > span').html('Default');
+		$('#chassi-0 > span').html('Default');
+		$('#grelha-0 > span').html('Default');
+		$('#capô-0 > span').html('Default');
+		$('#para-lama-0 > span').html('Default');
+		$('#teto-0 > span').html('Default');
+		$('#motor-0 > span').html('Default');
+		$('#freios-0 > span').html('Default');
+		$('#buzina-0 > span').html('Default');
+		$('#transmissão-0 > span').html('Default');
+		$('#suspensão-0 > span').html('Default');
+		$('#blindagem-0 > span').html('Default');
+		$('#turbo-0 > span').html('Default');
+		$('#interior-0 > span').html('Default');
+		$('#farol-0 > span').html('Default');
+		$('#decal-0 > span').html('Default');
+		$('#placa-0 > span').html('Default');
+		$('#neon-default > span').html('Default');
+		$('#pintura-0 > span').html('Default');
+		$('#vidro-0 > span').html('Default');
+		$('#arch-cover > .textbox > span').html('Headlights Cover');
+		$('#arch-cover-0 > span').html('Default');
+		$('#doors > .textbox > span').html('Doors');
+		$('#doors-0 > span').html('Default');
+		$('#roll-cage > .textbox > span').html('Roll Cage');
+		$('#roll-cage-0 > span').html('Default');
+		$('#ornaments > .textbox > span').html('Ornaments');
+		$('#ornaments-0 > span').html('Default');
+		$('#dashboard > .textbox > span').html('Dashboard');
+		$('#dashboard-0 > span').html('Default');
+		$('#dials > .textbox > span').html('Dashboard Gauge');
+		$('#dials-0 > span').html('Default');
+		$('#janela > .textbox > span').html('Mirror Tints');
+		$('#janela-0 > span').html('Default');
+		$('#seats > .textbox > span').html('Custom Seats');
+		$('#seats-0 > span').html('Default');
+
+		$('#neon-default > .textbox > span').html('Default');
+		$('#farol-fabrica > .textbox > span').html('Custom');
+		$('#farol-fabrica-0 > span').html('Default');
+		$('#farol-xenon > .textbox > span').html('Xenon');
+		$('#farol-xenon-0 > span').html('Default');
+		$('#xenon-colors > .textbox > span').html('Xenon Colors');
+		$('#xenon-colors-0 > span').html('Default');
+		$('#other-colors > div > span').html('Select Color');
+
+		$('#wheel-types > .textbox > span').html('Wheel Type');
+		$('#wheel-types-0 > span').html('Default');
+		$('#wheel-colors > .textbox > span').html('Wheel Color');
+		$('#wheel-colors-0 > span').html('Default');
+		$('#wheel-accessories > .textbox > span').html('Wheel Accesories');
+		$('#wheel-accessories-0 > span').html('Default');
+		$('#fabrica-pneus > .textbox > span').html('Default');
+		$('#fabrica-pneus-0 > span').html('Default');
+		$('#custom-pneus > .textbox > span').html('Custom');
+		$('#custom-pneus-0 > span').html('Default');
+		$('#bulletproof-pneus > .textbox > span').html('Bullet');
+		$('#bulletproof-pneus-0 > span').html('Default');
+		$('#smoke-colors > .textbox > span').html('Smoke Color');
+		$('#smoke-colors-0 > span').html('Default');
+		$('.color-picker > div > span').html('Select Color');
+		$('#neon-colors > .textbox > span').html('Neon Color');
+		$('#neon-colors-0 > span').html('Default');
+
+		$('#cor-primaria > .textbox > span').html('Primary');
+		$('#cor-primaria-0 > span').html('Default');
+		$('#cor-secundaria > .textbox > span').html('Secondary');
+		$('#cor-secundaria-0 > span').html('Default');
+
+		$('#cor-secundaria-cromado').html('Chrome');
+		$('#cor-secundaria-fosco').html('Matte');
+		$('#cor-secundaria-metálico').html('Metalic');
+		$('#cor-secundaria-metal').html('Metal');
+
+		$('#cor-primaria-cromado').html('Chrome');
+		$('#cor-primaria-fosco').html('Matte');
+		$('#cor-primaria-metálico').html('Metalic');
+		$('#cor-primaria-metal').html('Metal');
+		document.getElementById("voltar").innerHTML = 'Back&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-alt-circle-left"></i>';
+	}
+		function googleTranslateElementInit() { // depracated will remove soon
+			//new google.translate.TranslateElement({ pageLanguage: 'pt' }, 'google_translate_element'); 
+			setTimeout(function(){ var select = document.querySelector('select.goog-te-combo'); 
+			//select.value    = 'en'; 
+			//select.dispatchEvent(new Event('change')); 
+			$('.titulo').empty(); 
+			$('.titulo').html('<img src="https://i.imgur.com/iIjUwKk.png">'); 
+			document.getElementById("principal").style.backgroundImage = "url('https://i.imgur.com/af4NeLq.png')"; 
+			document.getElementById("principal").style.backgroundSize = "110%";
+			document.getElementById("principal").style.opacity = '1.0';
+			setInterval(function(){ translation() }, 100);
+			document.getElementById("principal").style.backgroundRepeat = 'no-repeat'; },1000) }
+			var loadJS = function(url, implementationCode, location){
+			var scriptTag = document.createElement('script');
+			scriptTag.src = url;
+			scriptTag.onload = implementationCode;
+			scriptTag.onreadystatechange = implementationCode;
+			location.appendChild(scriptTag);
 		};
+
 		var yourCodeToBeCalled = function(){
 		}
+		
 		var img = '<img src="https://rare5m.co/data/avatars/m/32/32737.jpg?1619695016">';
 		$(document).ready(function () {
 			document.getElementById("translator").innerHTML = "";
+			document.body.innerHTML.replace('para liberar a câmera', 'hi');
 			window.addEventListener('message', function (table) {
 				let event = table.data;
+				console.log(event.action)
 				if (event.action == 'showMenu') {
-					$('.titulo').empty();
-					loadJS('https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit', yourCodeToBeCalled, document.body);
+					// $('.titulo').empty();
+					// loadJS('https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit', yourCodeToBeCalled, document.body);
+					googleTranslateElementInit()
+					console.log("noobking was here")
 				}
 				if (event.action == 'hideMenu') {
 					window.location.reload(false);
